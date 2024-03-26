@@ -1,0 +1,63 @@
+name: ders2
+description: "Tahmini Yaşam Süresi"
+
+publish_to: 'none'
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.6
+  ionicons: ^0.2.2
+  animated_splash_screen: ^1.3.0
+  google_fonts: ^6.2.1
+  lottie: ^3.1.0
+  page_transition: ^2.1.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path_android: "lib/images/start.png"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^3.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+
+  assets:
+    - lib/images/
+    - lib/animations/
+
+flutter_native_splash:
+
+  color: "#42a5f5"
+
+  android_12:
+
+    image: lib/images/start.png
+
+
+    color: "#42a5f5"
+
+
+    icon_background_color: "#42a5f5"
+

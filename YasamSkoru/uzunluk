@@ -1,0 +1,46 @@
+
+
+//double yatay =MediaQuery.of(context).size.width;
+//double dusey=MediaQuery.of(context).size.height;
+
+Systemnavigator.pop sayfadan çıkmamıza yarar.
+
+
+
+//RotateBox: Bir konteynırdaki texti döndürmek için RotateBox widgeti kullanırız.
+// quaeterTurns -1 olunca dikey şekilde yazıları yazıyor.
+ RotatedBox(quarterTurns: -1,child: Text(boy.toString(),style: metinStyle,textAlign: TextAlign.center,),),
+
+
+
+// Slider :Bir çubuk üzerinde miktar seçimi yapmamızı sağlar.
+
+ Slider(
+     inactiveColor: Colors.red[200],
+     activeColor: Colors.lightBlue,
+      min: 0.0, // min sigara miktarı
+      max: 7.0, // max sigara miktarı
+      value:  yapilanSpor,
+      onChanged: (double secilenSpor){setState(() {
+      yapilanSpor=secilenSpor;
+       });},
+       divisions: 7, // Kaç parça olacak Slider?
+       ),
+
+ // OutlineButton : Bir butondur ve wrap edilen ButtonTheme ile özelleştirilir. minwidth minheight ile overflow engellenebilir.
+
+ ButtonTheme(splashColor: Colors.blue,buttonColor: Colors.blue,child: OutlinedButton(onPressed:(){}, child:  Expanded(child:Icon(icon,color: Colors.blue,))))
+
+
+ // BottomSheet : Alttan Açılan Yarım Bir sayfadır. Kullanımı
+
+ Future displayBottomSheet(BuildContext context){
+   return showModalBottomSheet(context: context,
+       backgroundColor: Colors.blue,
+       barrierColor: Colors.grey, // ARKAPALNI GRİ YAPAR.
+       isDismissible: false, // GERİYE GİTMEMEMİZE YARAR
+       builder: (context)=>Container(
+     height: MediaQuery.of(context).size.height/2,
+   ));
+ }
+
